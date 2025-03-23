@@ -105,13 +105,14 @@ nav {
     transition: 0.3s linear;
 }
 
-.nav-container .contact-btn:hover, .nav-container .contact-btn:hover a {
+.nav-container .contact-btn:hover, .nav-container .contact-btn:hover{
     background-color: rgb(109, 67, 0);
     color: white;
 }
 
 .nav-container .links a:hover {
-    color: rgb(109, 67, 0);
+    color: rgb(255, 255, 255);
+
 }
 
 .dropdown {
@@ -942,14 +943,17 @@ section {
 .footer-image.right {
     margin-left: 20px; /* Space between image and content */
 }
-/* Media Queries for Responsiveness */
+
+/* General Responsive Adjustments */
 @media (max-width: 1200px) {
+    /* Adjust container widths for smaller screens */
     .about-container, .skills-container, .projects-container, .timeline-container, .footer-container {
         padding: 0 40px;
     }
 }
 
 @media (max-width: 992px) {
+    /* Adjust layout for tablets */
     .main-container {
         flex-direction: column;
         text-align: center;
@@ -978,16 +982,16 @@ section {
     }
 
     .project {
-        width: 100%;
+        width: 100%; /* Stack projects vertically on tablets */
     }
 
     .timeline-card {
-        width: 90%;
-        margin-left: 5% !important;
+        width: 90%; /* Make timeline cards wider on tablets */
+        margin-left: 5% !important; /* Center cards */
     }
 
     .timeline-card::before {
-        display: none;
+        display: none; /* Hide dots on tablets */
     }
 
     .footer-container {
@@ -996,17 +1000,18 @@ section {
     }
 
     .footer-image.left, .footer-image.right {
-        margin: 20px 0;
+        margin: 20px 0; /* Stack footer images vertically */
     }
 }
 
 @media (max-width: 768px) {
+    /* Adjust layout for smaller tablets and large phones */
     .nav-container .links {
-        display: none;
+        display: none; /* Hide desktop nav links */
     }
 
     .hamburg, .cancel {
-        display: block;
+        display: block; /* Show hamburger menu */
     }
 
     .dropdown .links {
@@ -1053,16 +1058,17 @@ section {
     }
 
     .timeline-card {
-        width: 100%;
-        margin-left: 0 !important;
+        width: 100%; /* Full width for timeline cards on mobile */
+        margin-left: 0 !important; /* Remove left margin */
     }
 
     .footer-image img {
-        max-width: 200px;
+        max-width: 200px; /* Smaller images for mobile */
     }
 }
 
 @media (max-width: 576px) {
+    /* Adjust layout for small phones */
     .main-container .content h1 {
         font-size: 2rem;
     }
@@ -1124,6 +1130,6 @@ section {
     }
 
     .footer-image img {
-        max-width: 150px;
+        max-width: 150px; /* Even smaller images for very small screens */
     }
 }
